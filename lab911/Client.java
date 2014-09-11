@@ -8,8 +8,9 @@ public class Client {
 		config.setServerURL(new URL("http://127.0.0.1:2092"));
 		XmlRpcClient client = new XmlRpcClient();
 		client.setConfig(config);
-		Object[] params = new Object[]{new String("Hello"), new String(" World")};
-		String result = (String) client.execute("adder.append", params);
-		System.out.println("Result = " + result);
+		byte code[] = new byte[]{0x10,0x3};
+		Object[] params = new Object[]{new String("campbest"),code};
+		String authToken= (String) client.execute("lab.getAuthToken", params);
+		System.out.println("token = " + authToken);
 	}
 }

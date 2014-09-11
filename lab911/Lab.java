@@ -1,20 +1,18 @@
-public class Test {
-	public int sum(int a,int b) {
-		return a+b;
+/*
+*/
+public class Lab {
+	public String getAuthToken(String uid, byte code[]) {
+		System.out.println("uid: " + uid);
+		String token = uid + " 10011";
+		return token;
 	}
 
-	public int length(String s) {
-		return s.length();
+	private boolean authToken(String token) {
+			return true;
 	}
 
-	public String append(String a, String b) {
-		StringBuffer sb = new StringBuffer();
-		sb.append(a);
-		sb.append(" length of a=");
-		sb.append(a.length());
-		sb.append(" ");
-		sb.append(b);
-		return sb.toString();
+	public void storeURL(String token, String URL) {
+		System.err.println("Store URL: " + URL);
 	}
 }
 
